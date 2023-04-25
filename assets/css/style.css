@@ -28,6 +28,7 @@
   min-width: 410px;
   min-height: 260px;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .card::after,
