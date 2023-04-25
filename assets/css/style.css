@@ -13,6 +13,7 @@
 
 .container-small {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 6px;
 
@@ -22,21 +23,29 @@
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   position: relative;
 
-  min-width: 410px;
+  min-width: 310px;
+  max-width: 410px;
+  width: 100%;
   min-height: 260px;
   border-radius: 10px;
+
+  padding: 40px;
+  color: white;
+  font-weight: bold;
+
   overflow: hidden;
 }
 
 .card::after,
 .card::before {
+  --size: 220px;
+
   content: "";
   position: absolute;
-
-  --size: 220px;
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
@@ -82,26 +91,18 @@
 
 .row {
   display: flex;
-  flex-basis: 100%;
-
-  color: white;
-  font-weight: bold;
-  padding: 0 40px;
-}
-
-.row-1 {
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 
   font-size: 20px;
-  padding-bottom: 15px;
 }
 
-.row-2 {
+.big-text {
   font-size: 35px;
+  margin: 30px 0;
 }
 
-.row-3 {
+.small-text {
   font-size: 16px;
-  padding-top: 15px;
+  margin-top: auto;
 }
